@@ -1,10 +1,13 @@
-import org.example.modules.service.calculator.Calculator;
-import org.example.modules.serviceprovider.calculator.FunnyCalculator;
-import org.example.modules.serviceprovider.calculator.NormalCalculator;
+import org.example.modules.service.unitconverter.UnitConverter;
+import org.example.modules.serviceprovider.unitconverter.CurrencyConverter;
+import org.example.modules.serviceprovider.unitconverter.LengthConverter;
+import org.example.modules.serviceprovider.unitconverter.TemperatureConverter;
 
 module org.example.modules.serviceprovider {
+
     requires org.example.modules.service;
 
-    //Välj
-    provides Calculator with FunnyCalculator;
+    provides UnitConverter with LengthConverter,
+                                TemperatureConverter,
+                                CurrencyConverter;
 }
