@@ -74,7 +74,7 @@ public class Main {
         System.out.println("=============");
         for (UnitConverter c : CONVERTERS) {
             ConverterInfo info = c.getClass().getAnnotation(ConverterInfo.class);
-            System.out.printf("%s — %s%n", info.name(), info.description());
+            System.out.printf("%s - %s%n", info.name(), info.description());
         }
         System.out.println("=============");
     }
